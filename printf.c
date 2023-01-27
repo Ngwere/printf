@@ -1,7 +1,6 @@
 #include <stdarg.h>
 #include <unistd.h>
-#include "main.h"
-
+#include "holberton.h"
 /**
   * find_function - function that finds formats for _printf
   * calls the corresponding function.
@@ -20,6 +19,8 @@ int (*find_function(const char *format))(va_list)
 		{"b", print_bin},
 		{"u", print_unsig},
 		{"o", print_octal},
+		{"x", print_x},
+		{"X", print_X},
 		{"R", print_rot13},
 		{NULL, NULL}
 	};
